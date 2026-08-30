@@ -6,8 +6,8 @@ public class DBconnection{
     public static Connection connect() {
         try {
         	String url = "jdbc:oracle:thin:@localhost:1521/studentdb"; 
-            String user = "system"; 
-            String pass = "123"; 
+            String user = "enter your username here"; 
+            String pass = "enter your password here"; 
             return DriverManager.getConnection(url, user, pass);
             
         } catch (Exception e) {
