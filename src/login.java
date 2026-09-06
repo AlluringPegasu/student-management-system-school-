@@ -24,26 +24,19 @@ public class login extends JPanel {
 	 * Create the panel.
 	 */
 	public login(window parentWindow) {
-		setLayout(new MigLayout("", "[66px][22px][167px][][][][][][]", "[65px][18px][18px][20px]"));
+		setLayout(new MigLayout("", "[22px,grow][130.00px][130.00][grow]", "[65px][37.00][18px][18px][20px][99.00,grow]"));
 		
 		JLabel lblNewLabel_2 = new JLabel("SQL LOGIN");
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_2.setFont(new Font("Thunder SemBd", Font.BOLD, 40));
-		add(lblNewLabel_2, "cell 0 0 9 1,grow");
+		add(lblNewLabel_2, "cell 0 0 4 1,grow");
 		
 		JLabel lblNewLabel = new JLabel("username");
-		add(lblNewLabel, "cell 0 1,growx,aligny center");
-		
-		JLabel lblNewLabel_1 = new JLabel("password");
-		add(lblNewLabel_1, "cell 0 2,growx,aligny center");
+		add(lblNewLabel, "cell 1 2,growx,aligny center");
 		
 		textField = new JTextField();
-		add(textField, "cell 2 1,alignx left,aligny center");
+		add(textField, "cell 2 2,alignx left,aligny center");
 		textField.setColumns(10);
-		
-		textField_1 = new JTextField();
-		add(textField_1, "cell 2 2,alignx left,aligny center");
-		textField_1.setColumns(10);
 		
 		JButton btnNewButton = new JButton("continue");
 		btnNewButton.addActionListener(new ActionListener() {
@@ -60,7 +53,14 @@ public class login extends JPanel {
 				
 			}
 		});
-		add(btnNewButton, "cell 2 3,alignx left,aligny center");
+		
+		JLabel lblNewLabel_1 = new JLabel("password");
+		add(lblNewLabel_1, "cell 1 3,growx,aligny center");
+		
+		textField_1 = new JTextField();
+		add(textField_1, "cell 2 3,alignx left,aligny center");
+		textField_1.setColumns(10);
+		add(btnNewButton, "cell 1 4 2 1,alignx center,aligny center");
 
 	}
 }
