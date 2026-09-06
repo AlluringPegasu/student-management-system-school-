@@ -38,11 +38,11 @@ public class mainpage extends JPanel {
 	 * Create the panel.
 	 */
 	public mainpage() {
-		setLayout(new MigLayout("", "[64px][18px][4px][10px][86.00px][24.00px][86px][405px]", "[20px][18px][18px][19px][18px][24px][18px][26px][20px][50px][20px][10px][12px]"));
+		setLayout(new MigLayout("fill", "[80.00px][80.00px][80.00px][grow,fill]", "[20px][44.00px,grow][52.00px][19px][18px][24px][18px][26px][20px][grow][20px][10px][12px]"));
 		
 		JLabel lblNewLabel = new JLabel("Student ID");
 		lblNewLabel.setFont(new Font("Segoe UI", Font.BOLD, 12));
-		add(lblNewLabel, "cell 0 2 3 1,growx,aligny center");
+		add(lblNewLabel, "cell 0 2,growx,aligny center");
 		
 		JLabel lblNewLabel_1 = new JLabel("Name");
 		lblNewLabel_1.setFont(new Font("Segoe UI", Font.BOLD, 12));
@@ -53,7 +53,7 @@ public class mainpage extends JPanel {
 		add(lblNewLabel_2, "cell 0 6,alignx left,aligny center");
 		
 		JScrollPane scrollPane = new JScrollPane();
-		add(scrollPane, "cell 7 0 1 13,grow");
+		add(scrollPane, "cell 3 0 1 13,grow");
 		
 		table = new JTable();
 		scrollPane.setViewportView(table);
@@ -66,21 +66,21 @@ public class mainpage extends JPanel {
 		));
 		
 		textField = new JTextField();
-		add(textField, "cell 4 2 3 1,growx,aligny center");
+		add(textField, "cell 1 2 2 1,growx,aligny center");
 		textField.setColumns(10);
 		
 		textField_1 = new JTextField();
-		add(textField_1, "cell 4 4 3 1,growx,aligny center");
+		add(textField_1, "cell 1 4 2 1,growx,aligny center");
 		textField_1.setColumns(10);
 		
 		textField_2 = new JTextField();
-		add(textField_2, "cell 4 6 3 1,growx,aligny center");
+		add(textField_2, "cell 1 6 2 1,growx,aligny center");
 		textField_2.setColumns(10);
 		
 		JComboBox comboBox = new JComboBox();
 		comboBox.setFont(new Font("Segoe UI", Font.BOLD, 12));
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Computer Science", "Mathematics,", "Business Administration", "Mechanical Engineering"}));
-		add(comboBox, "cell 4 8 3 1,grow");
+		add(comboBox, "cell 1 8 2 1,grow");
 		
 		
 		
@@ -89,7 +89,7 @@ public class mainpage extends JPanel {
 		add(lblNewLabel_3, "cell 0 8,growx,aligny center");
 		
 		JLabel lblNewLabel_4 = new JLabel("");
-		add(lblNewLabel_4, "cell 2 12 5 1,grow");
+		add(lblNewLabel_4, "cell 0 12 3 1,grow");
 		
 		JButton btnNewButton = new JButton("Add");
 		btnNewButton.setFont(new Font("Segoe UI", Font.BOLD, 12));
@@ -113,7 +113,7 @@ public class mainpage extends JPanel {
                 }
 			}
 		});
-		add(btnNewButton, "cell 0 10 3 1,growx,aligny center");
+		add(btnNewButton, "cell 0 10,growx,aligny center");
 		JButton btnNewButton_1 = new JButton("Update");
 		btnNewButton_1.setFont(new Font("Segoe UI", Font.BOLD, 12));
 		btnNewButton_1.addActionListener(new ActionListener() {
@@ -137,7 +137,7 @@ public class mainpage extends JPanel {
                 }
 			}
 		});
-		add(btnNewButton_1, "cell 4 10,growx,aligny center");
+		add(btnNewButton_1, "cell 1 10,growx,aligny center");
 		
 		
 		JButton btnNewButton_3 = new JButton("Refresh Table");
@@ -156,7 +156,7 @@ public class mainpage extends JPanel {
 				}
 				}
 		});
-		add(btnNewButton_3, "cell 4 0 3 1,alignx right,aligny center");
+		add(btnNewButton_3, "cell 0 0 3 1,growx,aligny center");
 		
 		JButton btnNewButton_2 = new JButton("Delete");
 		btnNewButton_2.setFont(new Font("Segoe UI", Font.BOLD, 12));
@@ -176,7 +176,7 @@ public class mainpage extends JPanel {
 				}
 			}
 		});
-		add(btnNewButton_2, "cell 6 10,growx,aligny center");
+		add(btnNewButton_2, "cell 2 10,growx,aligny center");
 		
 
 	}
