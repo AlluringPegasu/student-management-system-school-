@@ -19,6 +19,8 @@ Open the DBconnection.java file and update the database URL, username, and passw
 add the JDBC jar file to your IDE's build path,
 
 --PROJECT STRUCTURE
-* StudentManagement.java - Contains the main menu loop and all the database SQL queries.
+* login.java - Contains the login page.
+* mainpage.java - Contains the main dashboard.
+* window.java - conects the login page and mainpage.
 * DBconnection.java - Handles connecting the code to the database server.
 * database.sql - The file containing the table structures and starter data.
